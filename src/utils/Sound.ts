@@ -35,19 +35,19 @@ const audioMap = {
     up: 'wallUp',
     down: 'damage',
   },
-  bricks: {
+  stadium: {
     up: 'brickUp',
     down: 'brickDown',
   },
-  brickProd: {
+  stadiumProd: {
     up: 'brickUp',
     down: 'brickDown',
   },
-  gems: {
+  capSpace: {
     up: 'gemUp',
     down: 'gemDown',
   },
-  gemProd: {
+  capSpaceProd: {
     up: 'gemUp',
     down: 'gemDown',
   },
@@ -105,9 +105,10 @@ export const play = (
   pan: boolean | number = 0,
 ): void => {
   const audioName: string = (() => {
-    const tempObj = audioMap[type]
-    if (hasOwnProperty(tempObj, 'up')) {
-      return tempObj[increase ? 'up' : 'down']
+    const tempObj = audioMap[type] as string;
+    if (hasOwnProperty(tempObj, 'up') && hasOwnProperty(tempObj, 'down')) {
+      if (increase) { return tempObj['up'] as string}
+      else { return tempObj['down'] as string}
     } else {
       return tempObj
     }

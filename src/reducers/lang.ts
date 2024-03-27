@@ -1,16 +1,16 @@
 import produce from 'immer'
 import {
-  UPDATE_ERATHIAN_MAIN,
   UPDATE_LANG_MAIN,
+  UPDATE_NAPA_MAIN,
 } from '../constants/ActionTypes'
-import { defaultErathian } from '../constants/defaultSettings'
+import { defaultNapa } from '../constants/defaultSettings'
 import { defaultLang } from '../i18n/langs'
 import { RootActionType } from '../types/actionObj'
 import { LangStateType } from '../types/state'
 
 const defaultLangState: LangStateType = {
   code: defaultLang,
-  erathian: defaultErathian,
+  napa: defaultNapa,
 }
 
 export default produce((draft: LangStateType, action: RootActionType) => {
@@ -19,8 +19,8 @@ export default produce((draft: LangStateType, action: RootActionType) => {
       draft.code = action.lang
       break
     }
-    case UPDATE_ERATHIAN_MAIN: {
-      draft.erathian = action.erathian
+    case UPDATE_NAPA_MAIN: {
+      draft.napa = action.napa
       break
     }
   }

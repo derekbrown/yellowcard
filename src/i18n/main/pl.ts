@@ -3,10 +3,8 @@ export const i18n = {
   wall: 'mur',
   resource: 'zasoby',
 
-  brick: 'kamień',
-  bricks: 'kamienie',
-  gem: 'klejnot',
-  gems: 'klejnoty',
+  stadium: 'kamień',
+  capSpace: 'klejnot',
   recruit: 'bestia',
   recruits: 'bestie',
 
@@ -134,7 +132,7 @@ export const i18n = {
   Help: 'Pomoc',
   'Toggle Full Screen': 'Pełny ekran',
 
-  ERATHIAN: 'Użyj Erathian [%s] (tylko języki z pismem łacińskim)',
+  NAPA: 'Użyj Napa [%s] (tylko języki z pismem łacińskim)',
 
   'ArcoMage HD': 'ArcoMage HD',
 

@@ -18,8 +18,8 @@ import dataCards from '../../src/data/cards'
 
 import noise from '../../assets/img/noise.webp'
 import cardbackbg from '../../assets/img/cardback.webp'
-import brick from '../../assets/img/brick.svg'
-import gem from '../../assets/img/gem.svg'
+import stadium from '../../assets/img/brick.svg'
+import capSpace from '../../assets/img/gem.svg'
 import recruit from '../../assets/img/recruit.svg'
 
 import { I18nContext } from '../i18n/I18nContext'
@@ -178,7 +178,7 @@ const useStyles = createUseStyles<
   },
   resbg: {
     'background-image': ({ type }) =>
-      type === undefined ? 'none' : `url(${[brick, gem, recruit][type]})`,
+      type === undefined ? 'none' : `url(${[stadium, capSpace, recruit][type]})`,
     background: {
       repeat: 'no-repeat',
       size: 'cover',
@@ -366,8 +366,8 @@ const Card = ({
     const cardTitle = _.i18n('This card costs %s').replace(
       '%s',
       cost === 1
-        ? _.i18n(['1 brick', '1 gem', '1 recruit'][type])
-        : _.i18n(['%s bricks', '%s gems', '%s recruits'][type]).replace(
+        ? _.i18n(['1 stadium', '1 cap space', '1 recruit'][type])
+        : _.i18n(['%s stadiums', '%s cap spaces', '%s recruits'][type]).replace(
             '%s',
             cost.toString(10),
           ),

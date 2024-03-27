@@ -22,7 +22,7 @@ const App = () => {
   const dispatch = useAppDispatch()
   const lang = useAppSelector((state) => state.lang.code)
   const volume = useAppSelector((state) => state.sound.volume)
-  const erathian: boolean = useAppSelector((state) => state.lang.erathian)
+  const napa: boolean = useAppSelector((state) => state.lang.napa)
   const _ = useContext(I18nContext)
   const { width, height } = useContext(GameSizeContext)
 
@@ -88,7 +88,7 @@ const App = () => {
       <Helmet>
         <html
           lang={lang}
-          data-erathian={(erathian && langInfo[lang].isLatinScript).toString()}
+          data-napa={(napa && langInfo[lang].isLatinScript).toString()}
         />
         <title>{_.i18n('ArcoMage HD')}</title>
         <meta name="title" content={_.i18n('ArcoMage HD')} />

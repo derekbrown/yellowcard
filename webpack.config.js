@@ -28,14 +28,6 @@ module.exports = (env, argv) => {
     .toISOString()
     .replace(/\.\d+Z$/, '+00:00')
 
-  const ogimageHash = (() => {
-    const fileBuffer = fs.readFileSync('./assets/misc/ogimage.jpg')
-    const hashSum = crypto.createHash('md4')
-    hashSum.update(fileBuffer)
-    const hex = hashSum.digest('hex')
-    return hex.substring(0, 20)
-  })()
-
   const config = {
     entry: {
       index: './src/index.tsx',
@@ -161,10 +153,6 @@ module.exports = (env, argv) => {
           dev || local ? './manifest.json' : `${homeUrl}manifest.json`,
         faviconSvg: dev || local ? './favicon.svg' : `${homeUrl}favicon.svg`,
         faviconIco: dev || local ? './favicon.ico' : `${homeUrl}favicon.ico`,
-        ogImage:
-          dev || local
-            ? './ogimage.jpg'
-            : `${homeUrl}ogimage.jpg?${ogimageHash}`,
         description:
           "Web-based free and open source HD clone of 3DO and NWC's 2000 card game Arcomage. Desktop / mobile Android iOS. Online / offline PWA. Single / Multiplayer",
         commitTime,
@@ -178,10 +166,6 @@ module.exports = (env, argv) => {
             globOptions: {
               ignore: ['**/manifest.template.ts'],
             },
-          },
-          {
-            from: 'assets/misc/**/*',
-            to: '[name][ext]',
           },
         ],
       }),

@@ -1,6 +1,6 @@
 export const coefs = {
-  bricks: 1,
-  gems: 1.28,
+  stadium: 1,
+  capSpace: 1.28,
   recruits: 1.05,
   prod: 18,
   tower: 3.67,

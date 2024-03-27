@@ -3,10 +3,8 @@ export const i18n = {
   wall: '壁',
   resource: '資源',
 
-  brick: 'レンガ',
-  bricks: 'レンガ',
-  gem: '宝石',
-  gems: '宝石',
+  stadium: 'レンガ',
+  capSpace: '宝石',
   recruit: '怪獣',
   recruits: '怪獣',
 
@@ -134,7 +132,7 @@ export const i18n = {
   Help: 'ヘルプ',
   'Toggle Full Screen': 'フルスクリーン切り替え',
 
-  ERATHIAN: 'エラシアン文字 [%s] を使用します（ラテン文字の言語のみ）',
+  NAPA: 'エラシアン文字 [%s] を使用します（ラテン文字の言語のみ）',
 
   'ArcoMage HD': 'アーコメイジHD',
 

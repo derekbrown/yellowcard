@@ -12,8 +12,8 @@ import { I18nContext } from '../i18n/I18nContext'
 import { upper1st } from '../utils/upper1st'
 import { smallRootFontScreenMax, unitTextMaxLength } from '../constants/visuals'
 
-import brick from '../../assets/img/brick.svg'
-import gem from '../../assets/img/gem.svg'
+import stadium from '../../assets/img/brick.svg'
+import capSpace from '../../assets/img/gem.svg'
 import recruit from '../../assets/img/recruit.svg'
 import { ResNameType } from '../constants/resourceNames'
 import { useAppSelector } from '../utils/useAppDispatch'
@@ -47,11 +47,11 @@ const useStyles = createUseStyles<
     unitTextLength: number
   }
 >({
-  brick: {
+  stadium: {
     'background-image': `url(${brickBg})`,
     'background-position': 'center 15%',
   },
-  gem: {
+  capSpace: {
     'background-image': `url(${gemBg})`,
     'background-position': 'center 21%',
   },
@@ -88,8 +88,8 @@ const useStyles = createUseStyles<
       smallMode
         ? `url(${
             {
-              brick,
-              gem,
+              stadium,
+              capSpace,
               recruit,
             }[type]
           })`
@@ -102,7 +102,7 @@ const useStyles = createUseStyles<
     opacity: ({ smallMode }) => (smallMode ? 0.75 : 1),
     transform: ({ type, smallMode }) => {
       if (smallMode) {
-        if (type === 'gem') {
+        if (type === 'capSpace') {
           return 'translateY(-12%)'
         } else if (type === 'recruit') {
           return 'translateY(6%)'
@@ -123,11 +123,11 @@ const Resource = ({ type, isOpponent }: PropType) => {
   const winHeight = size.height
   const height = winHeight * (size.narrowMobile ? 1 / 2 : 2 / 3)
   const smallMode = winHeight < smallRootFontScreenMax
-  const color = { brick: 'red', gem: 'blue', recruit: 'green' }[type]
+  const color = { stadium: 'red', capSpace: 'blue', recruit: 'green' }[type]
   const text = _.i18n(
     {
-      brick: 'bricks',
-      gem: 'gems',
+      stadium: 'stadium',
+      capSpace: 'capSpace',
       recruit: 'recruits',
     }[type],
   )
@@ -153,8 +153,8 @@ const Resource = ({ type, isOpponent }: PropType) => {
         '%s',
         _.i18n(
           {
-            brick: 'quarry',
-            gem: 'magic',
+            stadium: 'quarry',
+            capSpace: 'magic',
             recruit: 'dungeon',
           }[type],
         ),
@@ -164,8 +164,8 @@ const Resource = ({ type, isOpponent }: PropType) => {
         '%sp',
         _.i18n(
           {
-            brick: 'bricks',
-            gem: 'gems',
+            stadium: 'stadium',
+            capSpace: 'capSpace',
             recruit: 'recruits',
           }[type],
         ),
@@ -179,8 +179,8 @@ const Resource = ({ type, isOpponent }: PropType) => {
       '%sp',
       _.i18n(
         {
-          brick: 'bricks',
-          gem: 'gems',
+          stadium: 'stadium',
+          capSpace: 'capSpace',
           recruit: 'recruits',
         }[type],
       ),

@@ -1,54 +1,54 @@
 @font-face {
-  font-family: 'FatNumber';
-  src: url('../assets/font/FatNumber.woff2') format('woff2'),
-    url('../assets/font/FatNumber.woff') format('woff');
+  font-family: 'Napa';
+  src: url('../assets/font/GT-America-Napa-Bold.woff2') format('woff2'),
+    url('../assets/font/GT-America-Napa-Bold.woff') format('woff');
   font-weight: bold;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'RobotoCondensed';
-  src: url('../assets/font/RobotoCondensed-Bold.woff2') format('woff2'),
-    url('../assets/font/RobotoCondensed-Bold.woff') format('woff');
+  font-family: 'Rift';
+  src: url('../assets/font/Rift-Bold.woff2') format('woff2'),
+    url('../assets/font/Rift-Bold.woff') format('woff');
   font-weight: bold;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Erathian';
-  src: url('../assets/font/Erathian-min.woff2') format('woff2'),
-    url('../assets/font/Erathian-min.woff') format('woff');
+  font-family: 'Napa';
+  src: url('../assets/font/GT-America-Napa-Regular.woff2') format('woff2'),
+    url('../assets/font/GT-America-Napa-Regular.woff') format('woff');
   font-display: swap;
 }
 
-.fatnumber {
-  font-family: 'FatNumber';
+.napa {
+  font-family: 'Rift';
   font-weight: bold;
 }
 
-.robotocondensed {
-  font-family: 'RobotoCondensed';
+.rift {
+  font-family: 'Rift';
   font-weight: bold;
 }
 
-html[data-erathian='true'] {
+html[data-napa='true'] {
   .el-text,
   .window-wrapper:not(.screen-lang-pref) {
-    font-family: 'Erathian';
+    font-family: 'Rift';
     font-weight: bold;
   }
   .MuiTooltip-tooltip span {
-    font-family: 'Erathian';
+    font-family: 'Napa';
   }
 }
 
-.erathian {
-  font-family: 'Erathian';
+.napa {
+  font-family: 'Napa';
   font-weight: bold;
 }
 
-.erathian-normal {
-  font-family: 'Erathian';
+.napa-normal {
+  font-family: 'napa';
 }
 
 .emoji {

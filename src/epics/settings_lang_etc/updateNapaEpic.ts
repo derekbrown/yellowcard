@@ -1,6 +1,6 @@
 import {
-  UPDATE_LANG,
-  UPDATE_LANG_MAIN,
+  UPDATE_NAPA,
+  UPDATE_NAPA_MAIN,
   ABORT_ALL,
 } from '../../constants/ActionTypes'
 import { RootActionType } from '../../types/actionObj'
@@ -10,26 +10,26 @@ import { isOfType } from 'typesafe-actions'
 import { ofType, StateObservable } from 'redux-observable'
 import { RootStateType } from '../../types/state'
 import { lsSet } from '../../utils/localstorage'
-import { defaultNapa } from '../../constants/defaultSettings'
+import { defaultLang } from '../../i18n/langs'
 
 export default (
   action$: Observable<RootActionType>,
   state$: StateObservable<RootStateType>,
 ) =>
   action$.pipe(
-    filter(isOfType(UPDATE_LANG)),
+    filter(isOfType(UPDATE_NAPA)),
     mergeMap((action) => {
-      const { lang } = action
+      const { napa } = action
       lsSet((draft) => {
         if (draft.lang === undefined) {
-          draft.lang = { code: lang, napa: defaultNapa }
+          draft.lang = { code: defaultLang, napa }
         } else {
-          draft.lang.code = lang
+          draft.lang.napa = napa
         }
       })
       return of<RootActionType>({
-        type: UPDATE_LANG_MAIN,
-        lang,
+        type: UPDATE_NAPA_MAIN,
+        napa,
       }).pipe(takeUntil(action$.pipe(ofType(ABORT_ALL))))
     }),
   )

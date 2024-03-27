@@ -3,7 +3,7 @@ import {
   UPDATE_SETTINGS_MAIN,
   ABORT_ALL,
   INIT,
-  UPDATE_ERATHIAN_MAIN,
+  UPDATE_NAPA_MAIN,
   UPDATE_LANG_MAIN,
   UPDATE_VOLUME_MAIN,
   UPDATE_STEREO_MAIN,
@@ -33,7 +33,7 @@ export default (
     mergeMap((action) => {
       lsVersion()
       const lang = lsGet(['lang', 'code'])
-      const erathian = lsGet(['lang', 'erathian'])
+      const napa = lsGet(['lang', 'napa'])
       const settings = lsGet(['settings'])
       const volume = lsGet(['sound', 'volume'])
       const stereo = lsGet(['sound', 'stereo'])
@@ -59,10 +59,10 @@ export default (
               lang,
             })
           : EMPTY,
-        erathian !== null
+        napa !== null
           ? of<RootActionType>({
-              type: UPDATE_ERATHIAN_MAIN,
-              erathian,
+              type: UPDATE_NAPA_MAIN,
+              napa,
             })
           : EMPTY,
         volume !== null

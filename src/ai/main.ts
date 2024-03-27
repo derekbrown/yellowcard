@@ -11,13 +11,13 @@ import { coefs } from './coefs'
 import { getMaxScore } from './getMaxScore'
 
 const statusCoefs = (() => {
-  const { bricks, gems, recruits, prod, tower, wall } = coefs
+  const { stadium, capSpace, recruits, prod, tower, wall } = coefs
   return {
-    bricks,
-    gems,
+    stadium,
+    capSpace,
     recruits,
-    brickProd: bricks * prod,
-    gemProd: gems * prod,
+    stadiumProd: stadium * prod,
+    capSpaceProd: capSpace * prod,
     recruitProd: recruits * prod,
     tower,
     wall,
@@ -54,15 +54,15 @@ export const aiDecision = (
      */
     const winImm =
       oAfter.tower >= winTower ||
-      oAfter.bricks >= winResource ||
-      oAfter.gems >= winResource ||
+      oAfter.stadium >= winResource ||
+      oAfter.capSpace >= winResource ||
       oAfter.recruits >= winResource ||
       pAfter.tower <= 0
 
     const loseImm =
       pAfter.tower >= winTower ||
-      pAfter.bricks >= winResource ||
-      pAfter.gems >= winResource ||
+      pAfter.stadium >= winResource ||
+      pAfter.capSpace >= winResource ||
       pAfter.recruits >= winResource ||
       oAfter.tower <= 0
 

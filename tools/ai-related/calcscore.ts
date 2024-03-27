@@ -9,13 +9,13 @@ import { cardsI18n } from '../../src/i18n/cards/en'
 import fs from 'fs'
 
 const statusCoefs = (() => {
-  const { bricks, gems, recruits, prod, tower, wall } = coefs
+  const { stadium, capSpace, recruits, prod, tower, wall } = coefs
   return {
-    bricks,
-    gems,
+    stadium,
+    capSpace,
     recruits,
-    brickProd: bricks * prod,
-    gemProd: gems * prod,
+    stadiumProd: stadium * prod,
+    capSpaceProd: capSpace * prod,
     recruitProd: recruits * prod,
     tower,
     wall,

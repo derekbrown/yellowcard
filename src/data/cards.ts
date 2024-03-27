@@ -5,26 +5,26 @@ const cards: DataCardsType = [
   {
     // 0
     // name: 'Brick Shortage',
-    // desc: 'All players lose 8 bricks',
+    // desc: 'All players lose 8 stadium',
     type: 0,
     cost: 0,
     prob: 3,
     effect: (p, o) => {
-      change(p, 'bricks', -8)
-      change(o, 'bricks', -8)
+      change(p, 'stadium', -8)
+      change(o, 'stadium', -8)
     },
   },
   {
     // 1
     // name: 'Lucky Cache',
-    // desc: '+2 Bricks. +2 Gems. Play again',
+    // desc: '+2 stadium. +2 capSpace. Play again',
     type: 0,
     cost: 0,
     prob: 1,
     special: { playagain: true },
     effect: (p, o) => {
-      change(p, 'bricks', 2)
-      change(p, 'gems', 2)
+      change(p, 'stadium', 2)
+      change(p, 'capSpace', 2)
     },
   },
   {
@@ -47,7 +47,7 @@ const cards: DataCardsType = [
     cost: 3,
     prob: 3,
     effect: (p, o) => {
-      change(p, 'brickProd', 1)
+      change(p, 'stadiumProd', 1)
     },
   },
   {
@@ -58,10 +58,10 @@ const cards: DataCardsType = [
     cost: 4,
     prob: 3,
     effect: (p, o) => {
-      if (p.brickProd < o.brickProd) {
-        change(p, 'brickProd', 2)
+      if (p.stadiumProd < o.stadiumProd) {
+        change(p, 'stadiumProd', 2)
       } else {
-        change(p, 'brickProd', 1)
+        change(p, 'stadiumProd', 1)
       }
     },
   },
@@ -74,19 +74,19 @@ const cards: DataCardsType = [
     prob: 2,
     effect: (p, o) => {
       change(p, 'wall', 4)
-      change(p, 'brickProd', 1)
+      change(p, 'stadiumProd', 1)
     },
   },
   {
     // 6
     // name: 'Work Overtime',
-    // desc: '+5 Wall. You lose 6 gems',
+    // desc: '+5 Wall. You lose 6 capSpace',
     type: 0,
     cost: 2,
     prob: 3,
     effect: (p, o) => {
       change(p, 'wall', 5)
-      change(p, 'gems', -6)
+      change(p, 'capSpace', -6)
     },
   },
   {
@@ -97,8 +97,8 @@ const cards: DataCardsType = [
     cost: 5,
     prob: 2,
     effect: (p, o) => {
-      if (p.brickProd < o.brickProd) {
-        set(p, 'brickProd', o.brickProd)
+      if (p.stadiumProd < o.stadiumProd) {
+        set(p, 'stadiumProd', o.stadiumProd)
       }
     },
   },
@@ -127,14 +127,14 @@ const cards: DataCardsType = [
   {
     // 10
     // name: 'Innovations',
-    // desc: "+1 To all player's quarrys, you gain 4 gems",
+    // desc: "+1 To all player's quarrys, you gain 4 capSpace",
     type: 0,
     cost: 2,
     prob: 3,
     effect: (p, o) => {
-      change(p, 'brickProd', 1)
-      change(o, 'brickProd', 1)
-      change(p, 'gems', 4)
+      change(p, 'stadiumProd', 1)
+      change(o, 'stadiumProd', 1)
+      change(p, 'capSpace', 4)
     },
   },
   {
@@ -170,7 +170,7 @@ const cards: DataCardsType = [
     prob: 1,
     special: { playagain: true },
     effect: (p, o) => {
-      change(p, 'gemProd', 1)
+      change(p, 'capSpaceProd', 1)
     },
   },
   {
@@ -181,8 +181,8 @@ const cards: DataCardsType = [
     cost: 0,
     prob: 3,
     effect: (p, o) => {
-      change(p, 'brickProd', -1)
-      change(o, 'brickProd', -1)
+      change(p, 'stadiumProd', -1)
+      change(o, 'stadiumProd', -1)
     },
   },
   {
@@ -204,7 +204,7 @@ const cards: DataCardsType = [
     cost: 4,
     prob: 2,
     effect: (p, o) => {
-      change(o, 'brickProd', -1)
+      change(o, 'stadiumProd', -1)
     },
   },
   {
@@ -215,20 +215,20 @@ const cards: DataCardsType = [
     cost: 6,
     prob: 2,
     effect: (p, o) => {
-      change(p, 'brickProd', 2)
+      change(p, 'stadiumProd', 2)
     },
   },
   {
     // 18
     // name: 'Strip Mine',
-    // desc: '-1 Quarry. +10 Wall. You gain 5 gems',
+    // desc: '-1 Quarry. +10 Wall. You gain 5 capSpace',
     type: 0,
     cost: 0,
     prob: 2,
     effect: (p, o) => {
-      change(p, 'brickProd', -1)
+      change(p, 'stadiumProd', -1)
       change(p, 'wall', 10)
-      change(p, 'gems', 5)
+      change(p, 'capSpace', 5)
     },
   },
   {
@@ -257,13 +257,13 @@ const cards: DataCardsType = [
   {
     // 21
     // name: 'Crystal Rocks',
-    // desc: '+7 Wall, gain 7 gems',
+    // desc: '+7 Wall, gain 7 capSpace',
     type: 0,
     cost: 9,
     prob: 2,
     effect: (p, o) => {
       change(p, 'wall', 7)
-      change(p, 'gems', 7)
+      change(p, 'capSpace', 7)
     },
   },
   {
@@ -466,7 +466,7 @@ const cards: DataCardsType = [
     cost: 3,
     prob: 2,
     effect: (p, o) => {
-      change(p, 'gemProd', 1)
+      change(p, 'capSpaceProd', 1)
     },
   },
   {
@@ -511,14 +511,14 @@ const cards: DataCardsType = [
     cost: 6,
     prob: 2,
     effect: (p, o) => {
-      change(p, 'gemProd', 1)
+      change(p, 'capSpaceProd', 1)
       change(p, 'tower', 3)
       change(o, 'tower', 1)
     },
   },
   {
     // 42
-    // name: 'Gemstone Flaw',
+    // name: 'capSpacetone Flaw',
     // desc: '3 Damage to enemy tower',
     type: 1,
     cost: 2,
@@ -558,7 +558,7 @@ const cards: DataCardsType = [
     prob: 2,
     effect: (p, o) => {
       change(p, 'tower', -5)
-      change(p, 'gemProd', 2)
+      change(p, 'capSpaceProd', 2)
     },
   },
   {
@@ -569,7 +569,7 @@ const cards: DataCardsType = [
     cost: 7,
     prob: 2,
     effect: (p, o) => {
-      change(p, 'gemProd', 1)
+      change(p, 'capSpaceProd', 1)
       change(p, 'tower', 3)
       change(p, 'wall', 3)
     },
@@ -582,9 +582,9 @@ const cards: DataCardsType = [
     cost: 7,
     prob: 2,
     effect: (p, o) => {
-      const max = Math.max(o.gemProd, p.gemProd)
-      set(p, 'gemProd', max)
-      set(o, 'gemProd', max)
+      const max = Math.max(o.capSpaceProd, p.capSpaceProd)
+      set(p, 'capSpaceProd', max)
+      set(o, 'capSpaceProd', max)
     },
   },
   {
@@ -607,7 +607,7 @@ const cards: DataCardsType = [
     prob: 2,
     effect: (p, o) => {
       change(p, 'tower', 5)
-      change(p, 'gemProd', 1)
+      change(p, 'capSpaceProd', 1)
     },
   },
   {
@@ -618,20 +618,20 @@ const cards: DataCardsType = [
     cost: 8,
     prob: 3,
     effect: (p, o) => {
-      change(p, 'gemProd', -1)
+      change(p, 'capSpaceProd', -1)
       change(o, 'tower', -9)
     },
   },
   {
     // 51
     // name: 'Crumblestone',
-    // desc: '+5 Tower. Enemy loses 6 bricks',
+    // desc: '+5 Tower. Enemy loses 6 stadium',
     type: 1,
     cost: 7,
     prob: 2,
     effect: (p, o) => {
       change(p, 'tower', 5)
-      change(o, 'bricks', -6)
+      change(o, 'stadium', -6)
     },
   },
   {
@@ -655,8 +655,8 @@ const cards: DataCardsType = [
     effect: (p, o) => {
       change(p, 'tower', -7)
       change(o, 'tower', -7)
-      change(p, 'gemProd', -1)
-      change(o, 'gemProd', -1)
+      change(p, 'capSpaceProd', -1)
+      change(o, 'capSpaceProd', -1)
     },
   },
   {
@@ -674,13 +674,13 @@ const cards: DataCardsType = [
   {
     // 55
     // name: "Quarry's Help",
-    // desc: '+7 Tower. Lose 10 bricks',
+    // desc: '+7 Tower. Lose 10 stadium',
     type: 1,
     cost: 4,
     prob: 2,
     effect: (p, o) => {
       change(p, 'tower', 7)
-      change(p, 'bricks', -10)
+      change(p, 'stadium', -10)
     },
   },
   {
@@ -784,14 +784,14 @@ const cards: DataCardsType = [
   {
     // 64
     // name: 'Rainbow',
-    // desc: '+1 Tower to all players. You gain 3 gems',
+    // desc: '+1 Tower to all players. You gain 3 capSpace',
     type: 1,
     cost: 0,
     prob: 2,
     effect: (p, o) => {
       change(p, 'tower', 1)
       change(o, 'tower', 1)
-      change(p, 'gems', 3)
+      change(p, 'capSpace', 3)
     },
   },
   {
@@ -825,14 +825,14 @@ const cards: DataCardsType = [
   {
     // 67
     // name: 'Phase Jewel',
-    // desc: '+13 Tower. +6 Recruits. +6 Bricks',
+    // desc: '+13 Tower. +6 Recruits. +6 stadium',
     type: 1,
     cost: 18,
     prob: 2,
     effect: (p, o) => {
       change(p, 'tower', 13)
       change(p, 'recruits', 6)
-      change(p, 'bricks', 6)
+      change(p, 'stadium', 6)
     },
   },
   {
@@ -862,13 +862,13 @@ const cards: DataCardsType = [
   {
     // 70
     // name: 'Moody Goblins',
-    // desc: '4 Damage. You lose 3 gems',
+    // desc: '4 Damage. You lose 3 capSpace',
     type: 2,
     cost: 1,
     prob: 3,
     effect: (p, o) => {
       damage(o, 4)
-      change(p, 'gems', -3)
+      change(p, 'capSpace', -3)
     },
   },
   {
@@ -1036,17 +1036,17 @@ const cards: DataCardsType = [
   {
     // 85
     // name: 'Imp',
-    // desc: '6 Damage. All players lose 5 bricks, gems and recruits',
+    // desc: '6 Damage. All players lose 5 stadium, capSpace and recruits',
     type: 2,
     cost: 5,
     prob: 3,
     effect: (p, o) => {
       damage(o, 6)
-      change(p, 'bricks', -5)
-      change(p, 'gems', -5)
+      change(p, 'stadium', -5)
+      change(p, 'capSpace', -5)
       change(p, 'recruits', -5)
-      change(o, 'bricks', -5)
-      change(o, 'gems', -5)
+      change(o, 'stadium', -5)
+      change(o, 'capSpace', -5)
       change(o, 'recruits', -5)
     },
   },
@@ -1099,7 +1099,7 @@ const cards: DataCardsType = [
     cost: 9,
     prob: 2,
     effect: (p, o) => {
-      if (p.gemProd > o.gemProd) {
+      if (p.capSpaceProd > o.capSpaceProd) {
         damage(o, 12)
       } else {
         damage(o, 8)
@@ -1142,21 +1142,21 @@ const cards: DataCardsType = [
     prob: 2,
     effect: (p, o) => {
       damage(o, 8)
-      change(o, 'brickProd', -1)
+      change(o, 'stadiumProd', -1)
     },
   },
   {
     // 93
     // name: 'Thief',
-    // desc: 'Enemy loses 10 gems, 5 bricks, you gain 1/2 amt. round up',
+    // desc: 'Enemy loses 10 capSpace, 5 stadium, you gain 1/2 amt. round up',
     type: 2,
     cost: 12,
     prob: 2,
     effect: (p, o) => {
-      change(p, 'gems', Math.ceil((o.gems >= 10 ? 10 : o.gems) / 2))
-      change(p, 'bricks', Math.ceil((o.bricks >= 5 ? 5 : o.bricks) / 2))
-      change(o, 'gems', -10)
-      change(o, 'bricks', -5)
+      change(p, 'capSpace', Math.ceil((o.capSpace >= 10 ? 10 : o.capSpace) / 2))
+      change(p, 'stadium', Math.ceil((o.stadium >= 5 ? 5 : o.stadium) / 2))
+      change(o, 'capSpace', -10)
+      change(o, 'stadium', -5)
     },
   },
   {
@@ -1187,13 +1187,13 @@ const cards: DataCardsType = [
   {
     // 96
     // name: 'Dragon',
-    // desc: '20 Damage. Enemy loses 10 gems, -1 enemy dungeon',
+    // desc: '20 Damage. Enemy loses 10 capSpace, -1 enemy dungeon',
     type: 2,
     cost: 25,
     prob: 2,
     effect: (p, o) => {
       damage(o, 20)
-      change(o, 'gems', -10)
+      change(o, 'capSpace', -10)
       change(o, 'recruitProd', -1)
     },
   },
@@ -1221,7 +1221,7 @@ const cards: DataCardsType = [
     prob: 3,
     effect: (p, o) => {
       damage(o, 3)
-      change(p, 'gems', 1)
+      change(p, 'capSpace', 1)
     },
   },
   {
@@ -1239,13 +1239,13 @@ const cards: DataCardsType = [
   {
     // 100
     // name: 'Warlord',
-    // desc: '13 Damage. You lose 3 gems',
+    // desc: '13 Damage. You lose 3 capSpace',
     type: 2,
     cost: 13,
     prob: 2,
     effect: (p, o) => {
       damage(o, 13)
-      change(p, 'gems', -3)
+      change(p, 'capSpace', -3)
     },
   },
   {

@@ -1,10 +1,10 @@
-export const resNames = ['bricks', 'gems', 'recruits'] as const
+export const resNames = ['stadium', 'capSpace', 'recruits'] as const
 
-export const resProds = ['brickProd', 'gemProd', 'recruitProd']
+export const resProds = ['stadiumProd', 'capSpaceProd', 'recruitProd']
 
 export const resProdMap = {
-  brickProd: 'bricks',
-  gemProd: 'gems',
+  stadiumProd: 'stadium',
+  capSpaceProd: 'capSpace',
   recruitProd: 'recruits',
 } as const
 
@@ -13,11 +13,11 @@ export const poNames = ['playerName', 'opponentName'] as const
 export const allStatusNames = [
   'tower',
   'wall',
-  'bricks',
-  'gems',
+  'stadium',
+  'capSpace',
   'recruits',
-  'brickProd',
-  'gemProd',
+  'stadiumProd',
+  'capSpaceProd',
   'recruitProd',
 ] as const
 
@@ -34,9 +34,9 @@ export const nonNameSettingNames = [
 ] as const
 
 export const resNameAllMap = {
-  brick: ['bricks', 'brickProd'],
-  gem: ['gems', 'gemProd'],
+  stadium: ['stadium', 'stadiumProd'],
+  capSpace: ['capSpace', 'capSpaceProd'],
   recruit: ['recruits', 'recruitProd'],
 } as const
 
-export type ResNameType = 'brick' | 'gem' | 'recruit'
+export type ResNameType = 'stadium' | 'capSpace' | 'recruit'

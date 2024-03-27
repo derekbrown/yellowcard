@@ -32,7 +32,7 @@ export default (
       }
       const connectToPeerId: Promise<null> = new Promise((resolve, reject) => {
         if (peer !== null) {
-          let conn: Peer.DataConnection | null = null
+          let conn: any | null = null
           let timer: NodeJS.Timeout | null = null
           let tryTimes = 0
           const loop = () => {

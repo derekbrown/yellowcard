@@ -59,8 +59,8 @@ const Status = ({ playerName, isOpponent = false }: PropType) => {
         </TooltipAll>
       </div>
 
-      <Resource type="brick" isOpponent={isOpponent} />
-      <Resource type="gem" isOpponent={isOpponent} />
+      <Resource type="stadium" isOpponent={isOpponent} />
+      <Resource type="capSpace" isOpponent={isOpponent} />
       <Resource type="recruit" isOpponent={isOpponent} />
     </div>
   )

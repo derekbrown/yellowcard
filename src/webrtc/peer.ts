@@ -14,7 +14,7 @@ const config = {
 
 type ConnectionType = {
   peer: Peer | null
-  conn: Peer.DataConnection | null
+  conn: any | null
 }
 export const peerAll: ConnectionType = {
   peer: null,

@@ -8,7 +8,6 @@ import EndScreen from './screens/EndScreen'
 import Pref from './screens/Pref'
 import LangPref from './screens/LangPref'
 import SgPref from './screens/SgPref'
-import Help from './screens/Help'
 import LandscapeNotice from './screens/LandscapeNotice'
 import { isEndScreenNoCloseState } from '../types/state'
 import DisconnectNotice from './screens/DisconnectNotice'
@@ -65,7 +64,6 @@ const Game = () => {
       {pref && <Pref />}
       {langPref && <LangPref />}
       {sgPref && <SgPref />}
-      {help && <Help />}
       {landscape && <LandscapeNotice />}
       {disconnectNotice && <DisconnectNotice />}
       <ButtonBar />

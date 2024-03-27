@@ -15,7 +15,7 @@ import { EndScreenNoCloseStateType } from '../../types/state'
 // import { GameSizeContext } from '../../utils/GameSizeContext'
 
 const textMap = { lose: 'You Lose!', tie: 'Tie Game', win: 'You Win!' }
-const erathianTextMap = { lose: 'you lose', tie: 'tie game', win: 'you win' }
+const napaTextMap = { lose: 'you lose', tie: 'tie game', win: 'you win' }
 const imgMap = { lose: loseImg, tie: tieImg, win: winImg }
 
 // const animMap = { lose: 'blackNeon', tie: 'redNeon', win: 'redNeon' }
@@ -109,7 +109,7 @@ const useStyles = createUseStyles<string, EndScreenNoCloseStateType>({
     //   `$${animMap[type]} 0.08s ease-in-out infinite alternate`,
   },
 
-  erathiantext: {
+  napatext: {
     'font-size': '6.8vh',
     'line-height': '6.8vh',
     bottom: '42%',
@@ -117,7 +117,7 @@ const useStyles = createUseStyles<string, EndScreenNoCloseStateType>({
       '0 0 10px rgba(125,203,255,0.98), 0 0 30px rgba(125,203,255,0.82), 0 0 12px rgba(0,129,255,0.88), 0 0 22px rgba(0,129,255,0.84), 0 0 38px rgba(0,129,255,0.88), 0 0 60px rgba(0,129,255,1)',
   },
 
-  erathiantextspace: {
+  napatextspace: {
     display: 'inline-block',
     width: '4em',
   },
@@ -134,13 +134,13 @@ const EndScreen = (endScreenState: EndScreenNoCloseStateType) => {
 
   const text = _.i18n(textMap[type])
 
-  const erathianTextArr = erathianTextMap[type].split(' ')
+  const napaTextArr = napaTextMap[type].split(' ')
 
-  const erathianTextContainer = (
+  const napaTextContainer = (
     <>
-      {erathianTextArr[0]}
-      <span className={classes.erathiantextspace}></span>
-      {erathianTextArr[1]}
+      {napaTextArr[0]}
+      <span className={classes.napatextspace}></span>
+      {napaTextArr[1]}
     </>
   )
 
@@ -222,12 +222,12 @@ const EndScreen = (endScreenState: EndScreenNoCloseStateType) => {
         </div>
         <div
           className={cx(
-            classes.erathiantext,
+            classes.napatext,
             'absolute w-full tracking-tighter text-white text-center',
-            'erathian-normal',
+            'napa-normal',
           )}
         >
-          {erathianTextContainer}
+          {napaTextContainer}
         </div>
         {/* {(type === 'win' || type === 'tie') && (
           <>

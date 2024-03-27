@@ -3,10 +3,8 @@ export const i18n = {
   wall: '城牆',
   resource: '資源',
 
-  brick: '磚塊',
-  bricks: '磚塊',
-  gem: '寶石',
-  gems: '寶石',
+  stadium: '磚塊',
+  capSpace: '寶石',
   recruit: '魔獸',
   recruits: '魔獸',
 
@@ -131,7 +129,7 @@ export const i18n = {
   Help: '幫助',
   'Toggle Full Screen': '切換全屏模式',
 
-  ERATHIAN: '使用埃拉西亞文字 [%s]（僅限拉丁字母語言）',
+  NAPA: '使用埃拉西亞文字 [%s]（僅限拉丁字母語言）',
 
   'ArcoMage HD': '圓法師HD',
 

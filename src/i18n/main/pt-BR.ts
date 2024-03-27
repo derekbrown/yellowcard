@@ -3,10 +3,8 @@ export const i18n = {
   wall: 'muralha',
   resource: 'recurso',
 
-  brick: 'tijolo',
-  bricks: 'tijolos',
-  gem: 'gema',
-  gems: 'gemas',
+  stadium: 'tijolo',
+  capSpace: 'gema',
   recruit: 'recruta',
   recruits: 'recrutas',
 
@@ -135,7 +133,7 @@ export const i18n = {
   Help: 'Ajuda',
   'Toggle Full Screen': 'Tela Cheia',
 
-  ERATHIAN: 'Usar Erathian [%s] (somente linguagens de escrita latina)',
+  NAPA: 'Usar Napa [%s] (somente linguagens de escrita latina)',
 
   'ArcoMage HD': 'ArcoMage HD',
 

@@ -87,11 +87,11 @@ const Pref = () => {
 
     tower: useAppSelector((state) => state.settings.tower),
     wall: useAppSelector((state) => state.settings.wall),
-    bricks: useAppSelector((state) => state.settings.bricks),
-    gems: useAppSelector((state) => state.settings.gems),
+    stadium: useAppSelector((state) => state.settings.stadium),
+    capSpace: useAppSelector((state) => state.settings.capSpace),
     recruits: useAppSelector((state) => state.settings.recruits),
-    brickProd: useAppSelector((state) => state.settings.brickProd),
-    gemProd: useAppSelector((state) => state.settings.gemProd),
+    stadiumProd: useAppSelector((state) => state.settings.stadiumProd),
+    capSpaceProd: useAppSelector((state) => state.settings.capSpaceProd),
     recruitProd: useAppSelector((state) => state.settings.recruitProd),
 
     winTower: useAppSelector((state) => state.settings.winTower),
@@ -146,8 +146,8 @@ const Pref = () => {
     // resource victory condition must be 1 higher than any (res + resProd)
     const winResourceMin =
       Math.max(
-        formFields.bricks + formFields.brickProd,
-        formFields.gems + formFields.gemProd,
+        formFields.stadium + formFields.stadiumProd,
+        formFields.capSpace + formFields.capSpaceProd,
         formFields.recruits + formFields.recruitProd,
       ) + 1
 
@@ -496,7 +496,7 @@ const Pref = () => {
           />
         </label>
         <label>
-          <span>{upper1st(_.i18n('bricks'))}</span>
+          <span>{upper1st(_.i18n('stadium'))}</span>
           <input
             type="number"
             name={allStatusNames[2]}
@@ -505,14 +505,14 @@ const Pref = () => {
             disabled={isGuest}
             value={
               isGuest && tempSettingsStore !== null
-                ? tempSettingsStore.bricks
-                : formFields.bricks
+                ? tempSettingsStore.stadium
+                : formFields.stadium
             }
             onChange={handleChange}
           />
         </label>
         <label>
-          <span>{upper1st(_.i18n('gems'))}</span>
+          <span>{upper1st(_.i18n('capSpace'))}</span>
           <input
             type="number"
             name={allStatusNames[3]}
@@ -521,8 +521,8 @@ const Pref = () => {
             disabled={isGuest}
             value={
               isGuest && tempSettingsStore !== null
-                ? tempSettingsStore.gems
-                : formFields.gems
+                ? tempSettingsStore.capSpace
+                : formFields.capSpace
             }
             onChange={handleChange}
           />
@@ -572,8 +572,8 @@ const Pref = () => {
             disabled={isGuest}
             value={
               isGuest && tempSettingsStore !== null
-                ? tempSettingsStore.brickProd
-                : formFields.brickProd
+                ? tempSettingsStore.stadiumProd
+                : formFields.stadiumProd
             }
             onChange={handleChange}
           />
@@ -588,8 +588,8 @@ const Pref = () => {
             disabled={isGuest}
             value={
               isGuest && tempSettingsStore !== null
-                ? tempSettingsStore.gemProd
-                : formFields.gemProd
+                ? tempSettingsStore.capSpaceProd
+                : formFields.capSpaceProd
             }
             onChange={handleChange}
           />
@@ -641,8 +641,8 @@ const Pref = () => {
             id={otherSettingNames[1]}
             min={
               Math.max(
-                formFields.bricks + formFields.brickProd,
-                formFields.gems + formFields.gemProd,
+                formFields.stadium + formFields.stadiumProd,
+                formFields.capSpace + formFields.capSpaceProd,
                 formFields.recruits + formFields.recruitProd,
               ) + 1
             }

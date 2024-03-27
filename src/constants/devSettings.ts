@@ -28,11 +28,6 @@ export const canDiscardUndiscardableWhenDDP = false
 
 export const testLatency: [number, number] = [300, 6000]
 
-export const githubUrl = 'https://github.com/arcomage/arcomage-hd'
-export const authorUrl = 'https://github.com/tomchen'
-export const tutorialImageUrl =
-  'https://raw.githubusercontent.com/arcomage/arcomage-hd/main/misc/readme_images/manual.jpg'
-
-export const localstorageName = 'arcomagehdls'
-export const localstorageVersionName = 'arcomagehdls_ver'
+export const localstorageName = 'yellowcardls'
+export const localstorageVersionName = 'yellowcardls_ver'
 export const localstorageMinVer = '1.3.0'

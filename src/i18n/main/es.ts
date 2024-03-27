@@ -3,10 +3,8 @@ export const i18n = {
   wall: 'muro',
   resource: 'recurso',
 
-  brick: 'ladrillo',
-  bricks: 'ladrillos',
-  gem: 'gema',
-  gems: 'gemas',
+  stadium: 'ladrillo',
+  capSpace: 'gema',
   recruit: 'miembro',
   recruits: 'miembros',
 
@@ -135,7 +133,7 @@ export const i18n = {
   Help: 'Ayuda',
   'Toggle Full Screen': 'Activar la pantalla completa',
 
-  ERATHIAN: 'Usar Erathian [%s] (sólo lenguas de escritura latina)',
+  NAPA: 'Usar Napa [%s] (sólo lenguas de escritura latina)',
 
   'ArcoMage HD': 'ArcoMage HD',
 

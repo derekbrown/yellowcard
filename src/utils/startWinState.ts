@@ -13,21 +13,21 @@ export const getStartState = (
   const {
     tower,
     wall,
-    brickProd,
-    gemProd,
+    stadiumProd,
+    capSpaceProd,
     recruitProd,
-    bricks,
-    gems,
+    stadium,
+    capSpace,
     recruits,
   } = state
   return {
     tower,
     wall,
-    brickProd,
-    gemProd,
+    stadiumProd,
+    capSpaceProd,
     recruitProd,
-    bricks,
-    gems,
+    stadium,
+    capSpace,
     recruits,
   }
 }
@@ -47,11 +47,11 @@ export const getAllCondAndOtherSettingsArray = (
 ) => [
   settings.tower,
   settings.wall,
-  settings.bricks,
-  settings.gems,
+  settings.stadium,
+  settings.capSpace,
   settings.recruits,
-  settings.brickProd,
-  settings.gemProd,
+  settings.stadiumProd,
+  settings.capSpaceProd,
   settings.recruitProd,
   settings.winTower,
   settings.winResource,
@@ -64,11 +64,11 @@ export const allCondAndOtherSettingsEqual = (
 ): boolean =>
   settings1.tower === settings2.tower &&
   settings1.wall === settings2.wall &&
-  settings1.brickProd === settings2.brickProd &&
-  settings1.gemProd === settings2.gemProd &&
+  settings1.stadiumProd === settings2.stadiumProd &&
+  settings1.capSpaceProd === settings2.capSpaceProd &&
   settings1.recruitProd === settings2.recruitProd &&
-  settings1.bricks === settings2.bricks &&
-  settings1.gems === settings2.gems &&
+  settings1.stadium === settings2.stadium &&
+  settings1.capSpace === settings2.capSpace &&
   settings1.recruits === settings2.recruits &&
   settings1.winTower === settings2.winTower &&
   settings1.winResource === settings2.winResource &&

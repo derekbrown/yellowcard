@@ -1,7 +1,7 @@
 export const UPDATE_LANG = 'UPDATE_LANG' as const
 export const UPDATE_LANG_MAIN = 'UPDATE_LANG_MAIN' as const
-export const UPDATE_ERATHIAN = 'UPDATE_ERATHIAN' as const
-export const UPDATE_ERATHIAN_MAIN = 'UPDATE_ERATHIAN_MAIN' as const
+export const UPDATE_NAPA = 'UPDATE_NAPA' as const
+export const UPDATE_NAPA_MAIN = 'UPDATE_NAPA_MAIN' as const
 
 export const UPDATE_VOLUME = 'UPDATE_VOLUME' as const
 export const UPDATE_VOLUME_MAIN = 'UPDATE_VOLUME_MAIN' as const

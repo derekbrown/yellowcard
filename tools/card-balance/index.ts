@@ -15,11 +15,11 @@ const objCalc = (
 }
 
 const p: PersonStatusType = {
-  bricks: 1000,
-  gems: 1000,
+  stadium: 1000,
+  capSpace: 1000,
   recruits: 1000,
-  brickProd: 1000,
-  gemProd: 1000,
+  stadiumProd: 1000,
+  capSpaceProd: 1000,
   recruitProd: 1000,
   tower: 1000,
   wall: 1000,

@@ -1,8 +1,8 @@
 import {
   UPDATE_LANG,
   UPDATE_LANG_MAIN,
-  UPDATE_ERATHIAN,
-  UPDATE_ERATHIAN_MAIN,
+  UPDATE_NAPA,
+  UPDATE_NAPA_MAIN,
   UPDATE_VOLUME,
   UPDATE_VOLUME_MAIN,
   UPDATE_STEREO,
@@ -118,14 +118,14 @@ export type UpdateLangMainActionType = {
   lang: AvailableLangType
 }
 
-export type UpdateErathianActionType = {
-  type: typeof UPDATE_ERATHIAN
-  erathian: boolean
+export type UpdateNapaActionType = {
+  type: typeof UPDATE_NAPA
+  napa: boolean
 }
 
-export type UpdateErathianMainActionType = {
-  type: typeof UPDATE_ERATHIAN_MAIN
-  erathian: boolean
+export type UpdateNapaMainActionType = {
+  type: typeof UPDATE_NAPA_MAIN
+  napa: boolean
 }
 
 export type UpdateVolumeActionType = {
@@ -605,8 +605,8 @@ export type ReceiveActionType = {
 export type RootActionType =
   | UpdateLangActionType
   | UpdateLangMainActionType
-  | UpdateErathianActionType
-  | UpdateErathianMainActionType
+  | UpdateNapaActionType
+  | UpdateNapaMainActionType
   | UpdateVolumeActionType
   | UpdateVolumeMainActionType
   | UpdateStereoActionType

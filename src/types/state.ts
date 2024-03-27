@@ -1,11 +1,11 @@
 import { AvailableLangType } from '../i18n/types'
 
 export type PersonStatusType = {
-  bricks: number
-  gems: number
+  stadium: number
+  capSpace: number
   recruits: number
-  brickProd: number
-  gemProd: number
+  stadiumProd: number
+  capSpaceProd: number
   recruitProd: number
   tower: number
   wall: number
@@ -102,7 +102,7 @@ export type ScreenStateType = {
 
 export type LangStateType = {
   code: AvailableLangType
-  erathian: boolean
+  napa: boolean
 }
 
 export type SoundStateType = {

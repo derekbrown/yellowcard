@@ -7,7 +7,7 @@ import { langs, langInfo } from '../../i18n/langs'
 import { AvailableLangType } from '../../i18n/types'
 import {
   SCREEN_LANG_PREF,
-  UPDATE_ERATHIAN,
+  UPDATE_NAPA,
   UPDATE_LANG,
 } from '../../constants/ActionTypes'
 import { I18nContext } from '../../i18n/I18nContext'
@@ -15,18 +15,18 @@ import TooltipAll from '../special/TooltipAll'
 
 const LangPref = () => {
   const lang: AvailableLangType = useAppSelector((state) => state.lang.code)
-  const erathian: boolean = useAppSelector((state) => state.lang.erathian)
+  const napa: boolean = useAppSelector((state) => state.lang.napa)
   const _ = useContext(I18nContext)
   const dispatch = useAppDispatch()
 
-  const erathianLabel = (() => {
-    const er = _.i18n('ERATHIAN')
+  const napaLabel = (() => {
+    const er = _.i18n('NAPA')
     if (er !== undefined) {
       const arr = er.split('%s')
       return [
         <Fragment key={0}>{arr[0]}</Fragment>,
-        <span key={1} className={cx('text-2xl p-0', 'erathian')}>
-          Erathian
+        <span key={1} className={cx('text-2xl p-0', 'napa')}>
+          Napa
         </span>,
         <Fragment key={2}>{arr[1]}</Fragment>,
       ]
@@ -60,16 +60,16 @@ const LangPref = () => {
       <label className="flex w-full justify-center">
         <input
           type="checkbox"
-          checked={langInfo[lang].isLatinScript ? erathian : false}
+          checked={langInfo[lang].isLatinScript ? napa : false}
           disabled={!langInfo[lang].isLatinScript}
           onChange={(e) => {
             dispatch({
-              type: UPDATE_ERATHIAN,
-              erathian: e.target.checked,
+              type: UPDATE_NAPA,
+              napa: e.target.checked,
             })
           }}
         />
-        <span>{erathianLabel}</span>
+        <span>{napaLabel}</span>
       </label>
     </Window>
   )

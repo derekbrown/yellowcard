@@ -27,7 +27,7 @@ export default (
         return EMPTY
       }
       return merge(
-        fromEvent<Peer.DataConnection>(peer, 'connection').pipe(
+        fromEvent(peer, 'connection').pipe(
           mergeMap((conn) => {
             peerAll.conn = conn
             return concat(

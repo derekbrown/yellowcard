@@ -10,11 +10,11 @@ export const defaultSettings: SettingsType = {
   // name: 'default',
   tower: 20,
   wall: 10,
-  brickProd: 2,
-  gemProd: 2,
+  stadiumProd: 2,
+  capSpaceProd: 2,
   recruitProd: 2,
-  bricks: 5,
-  gems: 5,
+  stadium: 5,
+  capSpace: 5,
   recruits: 5,
   winTower: 50,
   winResource: 100,
@@ -42,7 +42,7 @@ export const defaultOpponentNameList = [
 const defaultPlayerName = ''
 const defaultOpponentName = ''
 
-export const defaultErathian = false
+export const defaultNapa = true
 
 export const defaultVolume = 5
 export const defaultStereo = true

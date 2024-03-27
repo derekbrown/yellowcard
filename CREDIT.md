@@ -78,16 +78,6 @@ The animations of the button icons, brick.svg, gem.svg, recruit.svg, the game en
 
 _(\* Uploaded before 15 January 2019, on which day Pixabay changed the license for all uploaded images and videos from CC0 to Pixabay License ([2019-01-14](https://web.archive.org/web/20190114121522/https://pixabay.com/) & [2019-01-15](https://web.archive.org/web/20190115202135/https://pixabay.com/) Pixabay homepage archive), therefore should be considered as being licensed under CC0)_
 
-### Erathian Font
-
-Erathian letters' shapes:  
-Copyright (c) New World Computing, Inc., The 3DO Company and Ubisoft Entertainment S.A.  
-Proprietary
-
-Erathian font (https://github.com/might-and-magic/erathian-font/):  
-Copyright (c) 2008-2020 Tom CHEN (tomchen.org)  
-[SIL Open Font License, Version 1.1](https://github.com/might-and-magic/erathian-font/blob/master/OFL.txt).
-
 ## Other Fairly Used Resources
 
 ### GitHub Logos
